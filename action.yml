@@ -1,0 +1,16 @@
+# action.yml
+name: 'Aleph Program Update'
+description: 'Updates Aleph MicroVM applications'
+inputs:
+  app-hash:  # hash of the application
+    description: 'Hash of the application'
+    required: true
+  app-folder: # folder of the app, relative to root
+    description: 'Folder of the app, relative to root'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.app-hash }}
+    - ${{ inputs.app-folder }}
