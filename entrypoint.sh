@@ -1,4 +1,4 @@
 #!/bin/sh -l
 
 
-aleph update $1 $2
+aleph update --private-key $3 $1 $2

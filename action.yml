@@ -8,9 +8,13 @@ inputs:
   app-folder: # folder of the app, relative to root
     description: 'Folder of the app, relative to root'
     required: true
+  secret-key: # the secret key of the eth account
+    description: "The account secret key"
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.app-hash }}
     - ${{ inputs.app-folder }}
+    - ${{ inputs.secret-key }}
