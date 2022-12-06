@@ -1,4 +1,4 @@
 #!/bin/sh -l
 
-
-aleph update --private-key $3 $1 $2
+echo SECRET_KEY | xxd -r -p - > device.key
+aleph update $1 $2
