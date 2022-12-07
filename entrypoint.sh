@@ -1,9 +1,7 @@
 #!/bin/sh -l
 
-#echo $3 | xxd -r -p - > device.key
-#aleph update $1 $2
-#echo "Private key is"
-#echo $3
-echo "input is:"
-echo $@
+echo "exporting key to file"
+echo $3 | xxd -r -p - > device.key
+echo "running the update"
+aleph update $1 $2
 echo "done"
