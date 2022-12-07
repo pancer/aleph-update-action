@@ -14,7 +14,7 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-#  args:
-#    - ${{ inputs.app-hash }}
-#    - ${{ inputs.app-folder }}
-#    - ${{ inputs.secret-key }}
+  args:
+    - ${{ inputs.app-hash }}
+    - ${{ inputs.app-folder }}
+    - ${{ inputs.secret-key }}

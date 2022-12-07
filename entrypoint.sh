@@ -4,4 +4,6 @@
 #aleph update $1 $2
 #echo "Private key is"
 #echo $3
-printenv
+echo "input is:"
+echo $@
+echo "done"
